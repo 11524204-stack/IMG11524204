@@ -24,7 +24,6 @@ let label = "";
 function preload() {
   classifier = ml5.imageClassifier(imageModelURL + 'model.json');
 }
-
 function setup() {
 
   createCanvas(320, 320);
@@ -68,7 +67,6 @@ function setup() {
   classifyVideo();
 
 }
-
 function draw() {
   background(0);
   // Draw the video
