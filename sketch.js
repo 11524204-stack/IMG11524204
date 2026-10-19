@@ -12,7 +12,7 @@ This example uses p5 preload function to create the classifier
 // Classifier Variable
 let classifier;
 // Model URL
-let imageModelURL = 'https://11524204-stack.github.io/IMG11524204/';
+let imageModelURL = 'https://teachablemachine.withgoogle.com/models/bXy2kDNi/';
 
 // Video
 let video;
@@ -24,6 +24,7 @@ let label = "";
 function preload() {
   classifier = ml5.imageClassifier(imageModelURL + 'model.json');
 }
+
 function setup() {
 
   createCanvas(320, 320);
@@ -67,6 +68,7 @@ function setup() {
   classifyVideo();
 
 }
+
 function draw() {
   background(0);
   // Draw the video
@@ -97,3 +99,4 @@ function gotResult(error, results) {
   label = results[0].label;
   // Classifiy again!
   classifyVideo();
+}
